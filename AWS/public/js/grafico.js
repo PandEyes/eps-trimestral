@@ -52,22 +52,22 @@ function totalChart(ctx, extraerdatos){
             //datasets se usa para establecer los datos que van a ser llenados 
             datasets: [{
                 //label se usa para establecer el nombre del gráfico
-                label: "Dividendo Real",
+                label: "EPS Real",
                 //data se usa para establecer cada dato mediante map que será mostrado en el gráfico
                 data: extraerdatos.map((item) => {
                     //Este if le indica a que si item.ingresos o item.ganancias es mayor que cero, mediante return lo muestre en el gráfico. Por el contrario no va a mostrarlo
-                    if(item.dividendoreal > 0){
-                        return item.dividendoreal;
+                    if(item.epsreal > 0){
+                        return item.epsreal;
                     }
                 }),
                 //borderColor establece el color del borde del gráfico y backgroundColor el color del fondo
                 borderColor: extraerdatos[0].colorBarra,
                 backgroundColor: extraerdatos[0].colorBarra,
             }, {
-                label: "Dividendo Proyectado",
+                label: "EPS Proyectado",
                 data: extraerdatos.map((item) => {
-                    if(item.dividendoproyectado > 0) {
-                        return item.dividendoproyectado;
+                    if(item.epsproyectado > 0) {
+                        return item.epsproyectado;
                     }
                 }),
                 borderColor: extraerdatos[0].colorBarra2,

@@ -1,9 +1,9 @@
-service: grafico-dividendos-tri
+service: grafico-eps-tri
 
 provider:
   name: aws
   runtime: nodejs14.x
-  stage: div
+  stage: eps
   region: us-east-2
 
 functions:
